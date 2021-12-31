@@ -1,4 +1,4 @@
-# MicroserviceCloudApplication1
+# Customer Registration Microservice and Fraud check microservice
 
 //to install maven using homebrew
 % brew install maven
@@ -28,7 +28,7 @@ https://devops.datenkollektiv.de/banner.txt/index.html
 % docker compose ps
 //access pgadmin
 http://localhost:5050
-create a database with name customer
+create a database with name customer and another one with name fraud
 
 //postman testing
 URL: localhost:8080/api/v1/customers
