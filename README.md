@@ -39,4 +39,8 @@ Body: RAW-JSON:
 "email": "abhilashgd@test.com"
 }
 
-//inside pdadmin->customer database-> select customer table, query ->select * from customers;
+//inside pdadmin-> customer database->schemas->tables->customer-> select customer table, query ->select * from customers;
+//pgadmin - chech for Sequences->customer_id_sequence
+
+//inside pdadmin->fraud database-> schemas->tables->fraud-> select fraud_check_history table, query ->
+select * from fraud_check_history;
