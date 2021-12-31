@@ -12,3 +12,13 @@ mvn archetype:generate -DgroupId=com.microservice.app -DartifactId=microservicet
 //to check structure of project in terminal
 % tree
 // % brew install tree // to install tree 
+
+//creating spring boot banners
+https://devops.datenkollektiv.de/banner.txt/index.html
+//banner for customer
+                          ,--.
+,---. ,--.,--.  ,---.  ,-'  '-.  ,---.  ,--,--,--.  ,---.  ,--.--.
+| .--' |  ||  | (  .-'  '-.  .-' | .-. | |        | | .-. : |  .--'
+\ `--. '  ''  ' .-'  `)   |  |   ' '-' ' |  |  |  | \   --. |  |
+`---'  `----'  `----'    `--'    `---'  `--`--`--'  `----' `--'
+

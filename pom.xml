@@ -6,7 +6,11 @@
 
   <groupId>com.microservice.app</groupId>
   <artifactId>microservicetest</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>customer</module>
+  </modules>
 
   <name>microservicetest</name>
   <!-- FIXME change it to the project's website -->
