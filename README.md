@@ -22,3 +22,21 @@ https://devops.datenkollektiv.de/banner.txt/index.html
 \ `--. '  ''  ' .-'  `)   |  |   ' '-' ' |  |  |  | \   --. |  |
 `---'  `----'  `----'    `--'    `---'  `--`--`--'  `----' `--'
 
+//command to run docker-compose.yml
+% docker compose up -d
+//Command to list docker compose containers running
+% docker compose ps
+//access pgadmin
+http://localhost:5050
+create a database with name customer
+
+//postman testing
+URL: localhost:8080/api/v1/customers
+Body: RAW-JSON:
+{
+"firstName": "abhilash",
+"lastName": "gd",
+"email": "abhilashgd@test.com"
+}
+
+//inside pdadmin->customer database-> select customer table, query ->select * from customers;
