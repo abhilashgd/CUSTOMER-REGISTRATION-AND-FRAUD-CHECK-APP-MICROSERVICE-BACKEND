@@ -45,3 +45,12 @@ Body: RAW-JSON:
 //inside pdadmin->fraud database-> schemas->tables->fraud-> select fraud_check_history table, query ->
 select * from fraud_check_history;
 to generate data for testing: https://www.mockaroo.com/
+
+//Customer Microservice interacts with Fraud Check Microservice using 
+FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
+                "http://localhost:8081/api/v1/fraud-check/{customerId}",
+                FraudCheckResponse.class,
+                customer.getId() );
+                
+//Syntax: 
+ResponseType obj=  new RestTemplate().getForObject(URL, ResponseType.class, params);
