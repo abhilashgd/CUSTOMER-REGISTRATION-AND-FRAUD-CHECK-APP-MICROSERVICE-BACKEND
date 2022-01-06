@@ -44,3 +44,4 @@ Body: RAW-JSON:
 
 //inside pdadmin->fraud database-> schemas->tables->fraud-> select fraud_check_history table, query ->
 select * from fraud_check_history;
+to generate data for testing: https://www.mockaroo.com/
