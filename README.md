@@ -137,6 +137,11 @@
                 //RUN customer application  2 and see if availability zones=2, in eureka server (http://localhost:8761/)
                 deleting second instance --> Configuration --> edit configuration--> delete
 
+                change localhost:8081 to FRAUD in customer service
+                in application.yml - change ddl-auto to create-drop (only in dev not in production)
+                
+                
+
 # FRAUD microservice changes
 
                 //Dependency
@@ -153,5 +158,8 @@
                     client:
                       service-url:
                         defaultZOne: http://localhost:8761/eureka
+                  //RUN fraud application and see if its getting reflected in eureka server (http://localhost:8761/)
 
+
+              
                                 
