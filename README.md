@@ -33,6 +33,11 @@
                 //access pgadmin
                 http://localhost:5050
                 create a database with name customer and another one with name fraud
+                abhilashgd=# CREATE DATABASE customer;
+                CREATE DATABASE
+                abhilashgd=# CREATE DATABASE fraud;
+                CREATE DATABASE
+
 
 **postman testing**
 
@@ -61,7 +66,7 @@
                 //Syntax: 
                 ResponseType obj=  new RestTemplate().getForObject(URL, ResponseType.class, params);
 
-#SERVICE DISCOVERY
+# SERVICE DISCOVERY
 
 **Eureka Server**
         
@@ -108,5 +113,45 @@
                 //Add Application.yaml in eureka-server module
                 
                 //Run Eureka Server
-                
+                BROWSER--> http://localhost:8761/
 
+# Customer microservice changes
+                
+                 <dependency>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                    </dependency>
+    
+                //annotate Customer application class
+                @EnableEurekaClient
+
+                //application.yml
+                eureka:
+                    client:
+                      service-url:
+                        defaultZOne: http://localhost:8761/eureka
+
+                //RUN customer application and see if its getting reflected in eureka server (http://localhost:8761/)
+                Configuration --> edit configuration-->duplicate customer application-->name it as customer application2-->
+                    environment-->program argument--> --server.port=8085-->apply
+                //RUN customer application  2 and see if availability zones=2, in eureka server (http://localhost:8761/)
+                deleting second instance --> Configuration --> edit configuration--> delete
+
+# FRAUD microservice changes
+
+                //Dependency
+                 <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                </dependency>
+
+                 //annotate Customer application class
+                @EnableEurekaClient
+
+                //application.yml
+                eureka:
+                    client:
+                      service-url:
+                        defaultZOne: http://localhost:8761/eureka
+
+                                
