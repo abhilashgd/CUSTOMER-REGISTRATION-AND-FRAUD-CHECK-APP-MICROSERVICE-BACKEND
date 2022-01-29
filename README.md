@@ -158,8 +158,10 @@
                     client:
                       service-url:
                         defaultZOne: http://localhost:8761/eureka
-                  //RUN fraud application and see if its getting reflected in eureka server (http://localhost:8761/)
-
-
+                  //RUN fraud application and see if its getting reflected in eureka server (http://localhost:876
               
+# LOAD BALANCING
+                
+                customer config class bean (RestTemplate) must be annotated with 
+                @LoadBalanced
                                 
