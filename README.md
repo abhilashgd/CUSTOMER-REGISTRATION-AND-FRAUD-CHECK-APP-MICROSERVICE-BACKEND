@@ -66,7 +66,7 @@
                 //Syntax: 
                 ResponseType obj=  new RestTemplate().getForObject(URL, ResponseType.class, params);
 
-# SERVICE DISCOVERY
+# SERVICE DISCOVERY [KUBERNETES is the best for managing service discovery. Eureka is just for testing locally]
 
 **Eureka Server**
         
